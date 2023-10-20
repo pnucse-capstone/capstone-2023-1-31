@@ -22,10 +22,10 @@ BLE를 활용한 물류 작업의 정확한 추적과 근로자의 움직임을 
 ## 3. 구성도
 
 ### 모델 구성
-![image](https://github.com/pnucse-capstone/capstone-2023-1-31/assets/128675907/27674e59-9468-4c0d-8836-f1e14ad8fe54)
+<img src="https://github.com/pnucse-capstone/capstone-2023-1-31/assets/128675907/27674e59-9468-4c0d-8836-f1e14ad8fe54" width="700 height=500">
 
 ### Zoning System Web Service
-![image](https://github.com/pnucse-capstone/capstone-2023-1-31/assets/128675907/d93f931b-6aa7-4cc8-9cbb-62de2b04d26e)  
+<img src="https://github.com/pnucse-capstone/capstone-2023-1-31/assets/128675907/d93f931b-6aa7-4cc8-9cbb-62de2b04d26e" width="700 height=500">   
 빨간 포인트를 통해 BLE beacon 위치를 추정할 수 있으며, 현재 어느 Zone에 위치했는지 추정할 수 있다.  
 하단에는 각 BLE Scanner에서 수집한 신호세기를 볼 수 있다.  
 각 Scanner의 위치는 1~6 순서로 (0,0), (5,0), (10,0), (0,5), (5,5), (10,5) (m)에 위치한다.
