@@ -1,0 +1,33 @@
+BEGIN
+   SET @sql = NULL;
+   
+   SELECT
+   	GROUP_CONCAT(DISTINCT
+         CONCAT(
+         	'MAX(CASE WHEN num_ = ',
+            num_,
+            ' THEN value_ END) AS ',
+            'value_', num_
+         )
+         )INTO @sql
+      FROM
+        (SELECT num_
+        FROM item
+        GROUP BY num_
+        ORDER BY count_ DESC) AS T;
+
+      SET @sql = CONCAT('
+      INSERT INTO esp32.merged SELECT ', @SQL, '
+      FROM (
+         SELECT i1.*
+         FROM item i1
+         LEFT JOIN item i2
+         ON i1.num_ = i2.num_ AND i1.count_ < i2.count_
+         WHERE i2.num_ IS NULL
+      ) AS max_counts;'
+   );
+
+   PREPARE stmt FROM @sql;
+   EXECUTE stmt;
+   DEALLOCATE PREPARE stmt;
+END
