@@ -94,11 +94,12 @@ def create_map(xy):
     fig, ax = plt.subplots(figsize=(18, 9))
     x_value, y_value = xy[0], xy[1]
     for i in range(len(x_ranges)):
-        x_min, x_max = x_ranges[i]
-        y_min, y_max = y_ranges[1]
+        for j in range(len(y_ranges)):
+            x_min, x_max = x_ranges[i]
+            y_min, y_max = y_ranges[j]
 
-        if x_min <= x_value <= x_max and y_min <= y_value <= y_max:
-            ax.fill_between([x_min, x_max], y_min, y_max, color='green', alpha=0.3)
+            if x_min <= x_value <= x_max and y_min <= y_value <= y_max:
+                ax.fill_between([x_min, x_max], y_min, y_max, color='green', alpha=0.3)
     ax.plot([3.3, 3.3], [0, 5], 'b-.', linewidth=2)
     ax.plot([6.6, 6.6], [0, 5], 'b-.', linewidth=2)
     ax.plot([0, 10], [2.5, 2.5], 'b-.', linewidth=2)
