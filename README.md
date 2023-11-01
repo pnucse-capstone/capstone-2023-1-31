@@ -32,7 +32,8 @@ BLE를 활용한 물류 작업의 정확한 추적과 근로자의 움직임을 
 
 ## 4. 소개 및 시연 영상
 
-예정.
+https://youtu.be/9SJSlHWz_x4?si=LXjDGPD-RFm-xZ-o
+
 
 ## 5. 사용법
 
